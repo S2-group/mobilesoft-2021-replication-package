@@ -1,0 +1,206 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+dataset$group = ordered(dataset$group,levels = c("idle", "low", "medium", "high"))
+levels(dataset$group)
+library(dplyr)
+
+group_by(dataset, group) %>%
+  summarise(
+    count = n(),
+    mean = mean(energy, na.rm = TRUE),
+    sd = sd(energy, na.rm = TRUE)
+  )
+```
+
+
+```{r}
+library("ggpubr")
+library("ggplot2")
+
+ggboxplot(dataset, x = "group", y = "energy", 
+          color = "group", palette = c("#00AFBB", "#E7B800", "#FC4E07", "#04B45F"),
+          order = c("idle", "low", "medium", "high"),
+          ylab = "Energy", xlab = "Treatment", ylim = c(0, 70))
+```
+
+
+```{r}
+res.aov <- aov(energy ~ group, data = dataset)
+summary(res.aov)
+```
+```{r}
+TukeyHSD(res.aov)
+```
+```{r}
+plot(res.aov, 1)
+```
+```{r}
+library(car)
+library(carData)
+leveneTest(energy ~ group, data = dataset)
+```
+```{r}
+plot(res.aov, 2)
+```
+```{r}
+# Extract the residuals
+aov_residuals <- residuals(object = res.aov )
+# Run Shapiro-Wilk test
+shapiro.test(x = aov_residuals )
+```
+```{r}
+kruskal.test(energy ~ group, data = dataset)
+```
+```{r}
+library(dplyr)
+group_by(dataset, group) %>%
+  summarise(p.value = shapiro.test(energy)$p.value)
+```
+```{r}
+
+idle = dataset[dataset$group== "idle", ]
+low = dataset[dataset$group== "low", ]
+medium = dataset[dataset$group== "medium", ]
+high = dataset[dataset$group== "high",]
+library("car")
+qqPlot(idle$energy)
+qqPlot(low$energy)
+qqPlot(medium$energy)
+qqPlot(high$energy)
+
+```
+```{r}
+library(FSA)
+hist(idle$energy)
+hist(low$energy)
+hist(medium$energy)
+hist(high$energy)
+```
+
+```{r}
+library(FSA)
+
+Summarize(energy ~ group,
+          data = dataset)
+```
+
+```{r}
+PT = dunnTest(energy ~ group,
+              data=dataset,
+              method="bh")
+
+PT
+```
+
+```{r}
+library(effsize)
+
+cliff.delta(idle$energy, low$energy)
+cliff.delta(idle$energy, medium$energy)
+cliff.delta(idle$energy, high$energy)
+cliff.delta(medium$energy, low$energy)
+cliff.delta(low$energy, high$energy)
+cliff.delta(medium$energy, high$energy)
+```
+```{r}
+d <- density(idle$energy) # returns the density data 
+plot(d, main = "Density of Energy consumption for Treatment- Idle") # plots the results
+library(e1071)
+skewness(idle$energy)
+skewness(low$energy)
+skewness(medium$energy)
+skewness(high$energy)
+skewness(dataset$energy)
+```
+```{r}
+d <- density(low$energy) # returns the density data 
+plot(d, main = "Density of Energy consumption for Treatment- Low") # plots the results
+
+```
+```{r}
+d <- density(medium$energy) # returns the density data 
+plot(d, main = "Density of Energy consumption for Treatment- Medium") # plots the results
+
+```
+```{r}
+d <- density(high$energy) # returns the density data 
+plot(d, main = "Density of Energy consumption for Treatment- High") # plots the results
+```
+
+
+```{r}
+str(dataset_2)
+dataset_2$group <- factor(dataset_2$group, 
+                  levels = c("idle", "low", "medium", "high"))
+dataset_2$subject <- factor(dataset_2$subject, 
+                  levels = c("telegram", "whatsapp"))
+```
+
+```{r}
+ggboxplot(dataset_2, x = "group", y = "energy", color = "subject",
+          palette = c("#00AFBB", "#E7B800"), ylim = c(0,70))
+```
+```{r}
+
+summary(dataset_2)
+
+```
+```{r}
+
+idle_whatsapp = dataset_2[(dataset_2$group== 'idle') & (dataset_2$subject == 'whatsapp'), ]
+idle_telegram = dataset_2[(dataset_2$group== 'idle') & (dataset_2$subject == 'telegram'), ]
+low_whatsapp = dataset_2[(dataset_2$group== 'low') & (dataset_2$subject == 'whatsapp'), ]
+low_telegram = dataset_2[(dataset_2$group== 'low') & (dataset_2$subject == 'telegram'), ]
+medium_whatsapp = dataset_2[(dataset_2$group== 'medium') & (dataset_2$subject == 'whatsapp'), ]
+medium_telegram = dataset_2[(dataset_2$group== 'medium') & (dataset_2$subject == 'telegram'), ]
+high_whatsapp = dataset_2[(dataset_2$group== 'high') & (dataset_2$subject == 'whatsapp'), ]
+high_telegram = dataset_2[(dataset_2$group== 'high') & (dataset_2$subject == 'telegram'), ]
+
+```
+
+```{r}
+analysis <- function(x){
+  print(round(sd(x),3))
+  print(round(mean(x),3))
+  print(round(median(x),3))
+  print(round(min(x),3))
+  print(round(max(x),3))
+  print("end")
+}
+
+analysis(idle_telegram$energy)
+analysis(idle_whatsapp$energy)
+```
+```{r}
+analysis(low_telegram$energy)
+analysis(low_whatsapp$energy)
+```
+```{r}
+analysis(medium_telegram$energy)
+analysis(medium_whatsapp$energy)
+```
+```{r}
+analysis(high_telegram$energy)
+analysis(high_whatsapp$energy)
+```
+```{r}
+hist(dataset$energy, xlab ="Energy Consumption", breaks = 40, main = "Histogram of Energy consumption")
+
+x <- density(dataset$energy) # returns the density data 
+plot(x, main = "Density of Energy consumption") 
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
