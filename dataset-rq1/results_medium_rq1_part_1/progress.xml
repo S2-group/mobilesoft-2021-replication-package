@@ -1,0 +1,108 @@
+<experiment>
+  <configHash>cdc0b582a59f20c8c9a0627cd73270f3</configHash>
+  <outputDir>/Users/steliosrammos/Development/automation-scripts/android-runner/examples/trepn/output/2020.10.14_175245/</outputDir>
+  <runsToRun>
+    </runsToRun>
+  <runsDone>
+    <run runId="13">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>4</runCount>
+    </run>
+  <run runId="16">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>7</runCount>
+    </run>
+    <run runId="12">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>3</runCount>
+    </run>
+    <run runId="5">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>6</runCount>
+    </run>
+    <run runId="8">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>9</runCount>
+    </run>
+    <run runId="11">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>2</runCount>
+    </run>
+    <run runId="18">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>9</runCount>
+    </run>
+    <run runId="7">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>8</runCount>
+    </run>
+    <run runId="17">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>8</runCount>
+    </run>
+    <run runId="10">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>1</runCount>
+    </run>
+    <run runId="0">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>1</runCount>
+    </run>
+    <run runId="3">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>4</runCount>
+    </run>
+    <run runId="19">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>10</runCount>
+    </run>
+  <run runId="6">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>7</runCount>
+    </run>
+    <run runId="15">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>6</runCount>
+    </run>
+    <run runId="9">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>10</runCount>
+    </run>
+    <run runId="1">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>2</runCount>
+    </run>
+    <run runId="2">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>3</runCount>
+    </run>
+    <run runId="14">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>5</runCount>
+    </run>
+    <run runId="4">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>5</runCount>
+    </run>
+    </runsDone>
+</experiment>

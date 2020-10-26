@@ -1,0 +1,458 @@
+<experiment>
+  <configHash>0420eb33c33d298e4fe7f7bc34249c1e</configHash>
+  <outputDir>/Users/steliosrammos/Development/automation-scripts/android-runner/examples/trepn/output/2020.10.12_215336/</outputDir>
+  <runsToRun>
+    </runsToRun>
+  <runsDone>
+    <run runId="69">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>10</runCount>
+    </run>
+    <run runId="82">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>23</runCount>
+    </run>
+    <run runId="31">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>2</runCount>
+    </run>
+    <run runId="46">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>17</runCount>
+    </run>
+    <run runId="88">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>29</runCount>
+    </run>
+    <run runId="43">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>14</runCount>
+    </run>
+    <run runId="29">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>30</runCount>
+    </run>
+    <run runId="44">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>15</runCount>
+    </run>
+    <run runId="40">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>11</runCount>
+    </run>
+    <run runId="36">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>7</runCount>
+    </run>
+    <run runId="57">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>28</runCount>
+    </run>
+    <run runId="49">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>20</runCount>
+    </run>
+    <run runId="33">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>4</runCount>
+    </run>
+    <run runId="74">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>15</runCount>
+    </run>
+    <run runId="39">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>10</runCount>
+    </run>
+    <run runId="12">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>13</runCount>
+    </run>
+  <run runId="77">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>18</runCount>
+    </run>
+    <run runId="24">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>25</runCount>
+    </run>
+    <run runId="38">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>9</runCount>
+    </run>
+    <run runId="84">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>25</runCount>
+    </run>
+    <run runId="68">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>9</runCount>
+    </run>
+    <run runId="9">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>10</runCount>
+    </run>
+    <run runId="17">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>18</runCount>
+    </run>
+    <run runId="47">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>18</runCount>
+    </run>
+    <run runId="34">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>5</runCount>
+    </run>
+    <run runId="7">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>8</runCount>
+    </run>
+    <run runId="59">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>30</runCount>
+    </run>
+    <run runId="65">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>6</runCount>
+    </run>
+    <run runId="48">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>19</runCount>
+    </run>
+    <run runId="81">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>22</runCount>
+    </run>
+    <run runId="51">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>22</runCount>
+    </run>
+    <run runId="58">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>29</runCount>
+    </run>
+    <run runId="8">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>9</runCount>
+    </run>
+    <run runId="70">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>11</runCount>
+    </run>
+    <run runId="30">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>1</runCount>
+    </run>
+    <run runId="4">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>5</runCount>
+    </run>
+    <run runId="16">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>17</runCount>
+    </run>
+    <run runId="61">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>2</runCount>
+    </run>
+    <run runId="26">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>27</runCount>
+    </run>
+    <run runId="80">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>21</runCount>
+    </run>
+    <run runId="64">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>5</runCount>
+    </run>
+    <run runId="21">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>22</runCount>
+    </run>
+    <run runId="2">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>3</runCount>
+    </run>
+    <run runId="42">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>13</runCount>
+    </run>
+    <run runId="89">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>30</runCount>
+    </run>
+  <run runId="23">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>24</runCount>
+    </run>
+    <run runId="25">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>26</runCount>
+    </run>
+    <run runId="22">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>23</runCount>
+    </run>
+    <run runId="18">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>19</runCount>
+    </run>
+    <run runId="87">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>28</runCount>
+    </run>
+    <run runId="11">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>12</runCount>
+    </run>
+    <run runId="15">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>16</runCount>
+    </run>
+    <run runId="19">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>20</runCount>
+    </run>
+    <run runId="79">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>20</runCount>
+    </run>
+    <run runId="78">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>19</runCount>
+    </run>
+    <run runId="1">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>2</runCount>
+    </run>
+    <run runId="71">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>12</runCount>
+    </run>
+    <run runId="85">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>26</runCount>
+    </run>
+    <run runId="63">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>4</runCount>
+    </run>
+    <run runId="3">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>4</runCount>
+    </run>
+    <run runId="83">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>24</runCount>
+    </run>
+    <run runId="14">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>15</runCount>
+    </run>
+    <run runId="76">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>17</runCount>
+    </run>
+    <run runId="73">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>14</runCount>
+    </run>
+    <run runId="20">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>21</runCount>
+    </run>
+    <run runId="6">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>7</runCount>
+    </run>
+    <run runId="67">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>8</runCount>
+    </run>
+    <run runId="35">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>6</runCount>
+    </run>
+    <run runId="50">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>21</runCount>
+    </run>
+    <run runId="13">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>14</runCount>
+    </run>
+    <run runId="45">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>16</runCount>
+    </run>
+    <run runId="5">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>6</runCount>
+    </run>
+    <run runId="60">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>1</runCount>
+    </run>
+    <run runId="32">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>3</runCount>
+    </run>
+    <run runId="54">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>25</runCount>
+    </run>
+    <run runId="28">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>29</runCount>
+    </run>
+    <run runId="37">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>8</runCount>
+    </run>
+    <run runId="53">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>24</runCount>
+    </run>
+    <run runId="52">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>23</runCount>
+    </run>
+    <run runId="0">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>1</runCount>
+    </run>
+    <run runId="55">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>26</runCount>
+    </run>
+    <run runId="66">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>7</runCount>
+    </run>
+    <run runId="75">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>16</runCount>
+    </run>
+    <run runId="41">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>12</runCount>
+    </run>
+    <run runId="86">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>27</runCount>
+    </run>
+    <run runId="62">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>3</runCount>
+    </run>
+    <run runId="10">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>11</runCount>
+    </run>
+    <run runId="56">
+      <device>nexus9</device>
+      <path>org.telegram.messenger</path>
+      <runCount>27</runCount>
+    </run>
+    <run runId="27">
+      <device>nexus9</device>
+      <path>com.whatsapp</path>
+      <runCount>28</runCount>
+    </run>
+    <run runId="72">
+      <device>nexus9</device>
+      <path>com.facebook.orca</path>
+      <runCount>13</runCount>
+    </run>
+    </runsDone>
+</experiment>

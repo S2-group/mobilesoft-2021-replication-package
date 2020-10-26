@@ -1,0 +1,4 @@
+device,subject,Battery Power* [uW] (Delta),Battery Power* [uW] (Raw)
+nexus9,com-facebook-orca,873.8695986169141,20754.445574433445
+nexus9,org-telegram-messenger,4472.02333201041,21184.753182555833
+nexus9,com-whatsapp,4686.095807563702,19248.306975802614
