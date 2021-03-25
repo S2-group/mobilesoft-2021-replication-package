@@ -8,6 +8,8 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
 
 ```{r}
+dataset <- read.csv("pre-processing data-rq1/dataset.csv")
+dataset_2 <- read.csv("pre-processing data-rq1/dataset_2.csv")
 dataset$group = ordered(dataset$group,levels = c("idle", "low", "medium", "high"))
 levels(dataset$group)
 library(dplyr)
@@ -24,11 +26,26 @@ group_by(dataset, group) %>%
 ```{r}
 library("ggpubr")
 library("ggplot2")
+library("dplyr")
 
-ggboxplot(dataset, x = "group", y = "energy", 
-          color = "group", palette = c("#00AFBB", "#E7B800", "#FC4E07", "#04B45F"),
-          order = c("idle", "low", "medium", "high"),
-          ylab = "Energy", xlab = "Treatment", ylim = c(0, 70))
+# p <- ggboxplot(dataset, x = "group", y = "energy", 
+          # color = "group", palette = c("#00AFBB", "#E7B800", "#FC4E07", "#04B45F"),
+          # order = c("idle", "low", "medium", "high"),
+          # ylab = "Energy Consumption (J)", xlab = "Frequency of messages", ylim = c(0, 70))
+# ggpar(p, legend.position = "none")
+
+ticks <- c("Idle", "Low", "Medium", "High")
+
+dataset$group <- as.factor(dataset$group)
+
+dataset$group <- factor(dataset$group,
+                levels =  c("idle", "low", "medium", "high"))
+
+ggplot(data = dataset, aes(x = group, y = energy)) + geom_boxplot() + theme_pubr() + theme(legend.position = "none") + labs(x="Frequency of messages", y="Energy consumption (J)") + scale_x_discrete(labels= ticks)
+
+
+ggsave("./dataset-rq1/boxplot_rq1_1.pdf", scale = 1.5, height = 5, width = 10, unit = "cm", device=cairo_pdf)
+embed_fonts("./dataset-rq1/boxplot_rq1_1.pdf", outfile="./dataset-rq1/boxplot_rq1_1.pdf")
 ```
 
 
@@ -111,28 +128,53 @@ cliff.delta(low$energy, high$energy)
 cliff.delta(medium$energy, high$energy)
 ```
 ```{r}
-d <- density(idle$energy) # returns the density data 
-plot(d, main = "Density of Energy consumption for Treatment- Idle") # plots the results
 library(e1071)
 skewness(idle$energy)
 skewness(low$energy)
 skewness(medium$energy)
 skewness(high$energy)
 skewness(dataset$energy)
+
+d <- density(idle$energy) # returns the density data 
+plot(d, main = "Density of Energy consumption for Treatment- Idle") # plots the results
+
+idle$subject <- revalue(idle$subject, c("telegram"="Telegram", "whatsapp"="WhatsApp"))
+ggplot(data = idle, aes(x = energy, fill=subject)) + geom_density(alpha=0.4) + theme_pubr() + labs(x="Energy consumption (J)", y="Density") + theme(legend.title=element_blank(), legend.position = c(0.9, 0.9), legend.box = "vertical", plot.title = element_text(hjust = 0.5)) + ggtitle("Idle")
+
+ggsave("./density-615.pdf", scale = 1.5, height = 4, width = 10, unit = "cm", device=cairo_pdf)
+embed_fonts("./dataset-rq1/density-615.pdf", outfile="./dataset-rq1/density-615.pdf")
 ```
 ```{r}
 d <- density(low$energy) # returns the density data 
 plot(d, main = "Density of Energy consumption for Treatment- Low") # plots the results
+
+low$subject <- revalue(low$subject, c("telegram"="Telegram", "whatsapp"="WhatsApp"))
+ggplot(data = low, aes(x = energy, fill=subject)) + geom_density(alpha=0.4) + theme_pubr() + labs(x="Energy consumption (J)", y="Density") + theme(legend.title=element_blank(), legend.position = c(0.9, 0.9), legend.box = "vertical", plot.title = element_text(hjust = 0.5)) + ggtitle("Low frequency")
+
+ggsave("./density-616.pdf", scale = 1.5, height = 4, width = 10, unit = "cm", device=cairo_pdf)
+embed_fonts("./dataset-rq1/density-616.pdf", outfile="./dataset-rq1/density-616.pdf")
 
 ```
 ```{r}
 d <- density(medium$energy) # returns the density data 
 plot(d, main = "Density of Energy consumption for Treatment- Medium") # plots the results
 
+medium$subject <- revalue(medium$subject, c("telegram"="Telegram", "whatsapp"="WhatsApp"))
+ggplot(data = medium, aes(x = energy, fill=subject)) + geom_density(alpha=0.4) + theme_pubr() + labs(x="Energy consumption (J)", y="Density") + theme(legend.title=element_blank(), legend.position = c(0.9, 0.9), legend.box = "vertical", plot.title = element_text(hjust = 0.5)) + ggtitle("Medium frequency")
+
+ggsave("./density-617.pdf", scale = 1.5, height = 4, width = 10, unit = "cm", device=cairo_pdf)
+embed_fonts("./dataset-rq1/density-617.pdf", outfile="./dataset-rq1/density-617.pdf")
+
 ```
 ```{r}
 d <- density(high$energy) # returns the density data 
 plot(d, main = "Density of Energy consumption for Treatment- High") # plots the results
+
+high$subject <- revalue(high$subject, c("telegram"="Telegram", "whatsapp"="WhatsApp"))
+ggplot(data = high, aes(x = energy, fill=subject)) + geom_density(alpha=0.4) + theme_pubr() + labs(x="Energy consumption (J)", y="Density") + theme(legend.title=element_blank(), legend.position = c(0.9, 0.9), legend.box = "vertical", plot.title = element_text(hjust = 0.5)) + ggtitle("High frequency")
+
+ggsave("./dataset-rq1/density-618.pdf", scale = 1.5, height = 4, width = 10, unit = "cm", device=cairo_pdf)
+embed_fonts("./dataset-rq1/density-618.pdf", outfile="./dataset-rq1/density-618.pdf")
 ```
 
 
@@ -145,8 +187,25 @@ dataset_2$subject <- factor(dataset_2$subject,
 ```
 
 ```{r}
+library(plyr)
 ggboxplot(dataset_2, x = "group", y = "energy", color = "subject",
           palette = c("#00AFBB", "#E7B800"), ylim = c(0,70))
+
+ticks <- c("Idle", "Low", "Medium", "High")
+
+dataset_2$group <- as.factor(dataset_2$group)
+dataset_2$subject <- as.factor(dataset_2$subject)
+
+dataset_2$group <- factor(dataset_2$group,
+                levels =  c("idle", "low", "medium", "high"))
+dataset_2$subject <- factor(dataset_2$subject,
+                levels =  c("telegram", "whatsapp"))
+dataset_2$subject <- revalue(dataset_2$subject, c("telegram"="Telegram", "whatsapp"="WhatsApp"))
+
+ggplot(data = dataset_2, aes(x = group, y = energy, fill = subject)) + geom_boxplot() + theme_pubr() + theme(legend.position = "none") + labs(x="Frequency of messages", y="Energy consumption (J)") + scale_x_discrete(labels= ticks) + theme(legend.title=element_blank(), legend.position = c(0.9, 0.9), legend.box = "vertical") 
+
+ggsave("./dataset-rq1/boxplot_rq1_2.pdf", scale = 1.5, height = 5, width = 10, unit = "cm", device=cairo_pdf)
+embed_fonts("./dataset-rq1/boxplot_rq1_2.pdf", outfile="./dataset-rq1/boxplot_rq1_2.pdf")
 ```
 ```{r}
 
@@ -194,8 +253,16 @@ analysis(high_whatsapp$energy)
 ```{r}
 hist(dataset$energy, xlab ="Energy Consumption", breaks = 40, main = "Histogram of Energy consumption")
 
+ggplot(data = dataset, aes(x=energy)) + geom_histogram(color="black", fill="white", binwidth=2)+ theme_pubr() + labs(x="Energy consumption (J)", y="Frequency")
+
+ggsave("./dataset-rq1/fig-611.pdf", scale = 1.5, height = 7, width = 10, unit = "cm", device=cairo_pdf)
+embed_fonts("./dataset-rq1/fig-611.pdf", outfile="./fig-611.pdf")
+
 x <- density(dataset$energy) # returns the density data 
 plot(x, main = "Density of Energy consumption") 
+
+# ggplot(data = dataset, aes(x = energy)) + geom_density(alpha=0.4, fill="lightgray") + theme_pubr() + labs(x="Energy consumption (J)", y="Density") + theme(legend.title=element_blank(), legend.position = c(0.9, 0.9), legend.box = "vertical")
+
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
