@@ -1,9 +1,35 @@
-# Instant Messaging (IM) Applications Energy Consumption
+# The Impact of Instant Messaging on the Energy Consumption of Android Devices 
 
-Here we provide instructions to run the Android Runner experiments 
-which measure the energy consumption of WhatsApp and Telegram.
+This repository contains the replication package and dataset of the paper published at MOBILESoft 2021 with the title **The Impact of Instant Messaging on the Energy Consumption of Android Devices**
 
-## Interaction File
+The full dataset including raw data, mining scripts, and analysis R scripts produced during the study are available below.
+
+This study has been designed, developed, and reported by the following investigators:
+- Stylianos Rammos (Vrije Universiteit Amsterdam)
+- Mansi Mundra (Vrije Universiteit Amsterdam)
+- Guijing Xu (Vrije Universiteit Amsterdam)
+- Chuyi Tong (Vrije Universiteit Amsterdam)
+- Wojciech Ziółkowski (Vrije Universiteit Amsterdam)
+- [Ivano Malavolta](http://www.ivanomalavolta.com/)  (Vrije Universiteit Amsterdam)
+
+## How to cite this study
+If this study is helping your research, consider to cite it is as follows, thanks!
+```
+@inproceedings{MOBILESoft_2021,
+  title={{The Impact of Instant Messaging on the Energy Consumption of Android Devices}},
+  author={Stylianos Rammos and Mansi Mundra and Guijing Xu and Chuyi Tong and Wojciech Ziółkowski and Ivano Malavolta},
+  booktitle = {8th IEEE/ACM International Conference on Mobile Software Engineering and Systems 2021},
+  year = {2021},
+  pages = {to appear},
+  url = {http://www.ivanomalavolta.com/files/papers/MOBILESoft_2021.pdf}
+}
+```
+
+## Instructions for replicating the experiment
+
+Here we provide instructions to run the experiment which measure the energy consumption of WhatsApp and Telegram.
+
+### Interaction File
 
 The `interaction.py` file contains experiment coordination code. It contains two methods `whatsapp_script()` 
 and `tg_script()` which authenticate to the API of each respective application and send the messages programatically.
@@ -20,12 +46,12 @@ These methods take the same 3 parameters:
 2. `sleep_btw_msgs`: time between messages in seconds
 3. `num_of_msgs`: total number of messages to send
  
- ### Setup for Experiment 
+ ### Setup of the experiment 
  
  In order to reproduce the results of our experiments, follow the instructions given below to give the 
  correct values to each variable
  
- * RQ 1 
+ * RQ1 
  
  For this experiment the variables in `main` must be set as follows:
 
@@ -43,7 +69,7 @@ For example, the values for treatment 1 would be:
 
 `burst`: `False`
 
-* RQ 2
+* RQ2
 
 For this experiment, the same as above applies for Treatment 1. 
 
