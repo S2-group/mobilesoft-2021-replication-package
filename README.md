@@ -2,6 +2,8 @@
 
 This repository contains the replication package and dataset of the paper published at MOBILESoft 2021 with the title **The Impact of Instant Messaging on the Energy Consumption of Android Devices**
 
+[![Teaser video about the study](http://img.youtube.com/vi/IfRTPKI_KGE/0.jpg)](http://www.youtube.com/watch?v=IfRTPKI_KGE "Teaser video about the study")
+
 The full dataset including raw data, mining scripts, and analysis R scripts produced during the study are available below.
 
 This study has been designed, developed, and reported by the following investigators:
